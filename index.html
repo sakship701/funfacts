@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web Page</title>
+    <title>Random Mumbai Facts</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,13 +41,27 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Simple Web Page</h1>
-        <button id="clickMe">Click Me!</button>
-        <p id="message"></p>
+        <h1>Random Facts About Mumbai</h1>
+        <button id="generateFact">Generate Fact</button>
+        <p id="fact"></p>
     </div>
     <script>
-        document.getElementById('clickMe').addEventListener('click', function() {
-            document.getElementById('message').textContent = 'Button clicked! Welcome to the world of JavaScript!';
+        const facts = [
+            "Mumbai is often referred to as the financial capital of India.",
+            "It is one of the most populous cities in the world, with a population of over 20 million people.",
+            "Mumbai is known for its cultural diversity, with people from various ethnicities and backgrounds.",
+            "The city is the heart of the Indian film industry, popularly known as Bollywood.",
+            "The Gateway of India was built in 1924 to commemorate the visit of King George V and Queen Mary.",
+            "Marine Drive is famous for its stunning views of the Arabian Sea.",
+            "Mumbai is home to several UNESCO World Heritage Sites, including the Chhatrapati Shivaji Maharaj Terminus.",
+            "The city's dabbawalas are famous for their efficient lunchbox delivery system.",
+            "Mumbai contributes significantly to India's GDP, with a diverse economy.",
+            "The city has an extensive public transport system, including local trains and buses."
+        ];
+
+        document.getElementById('generateFact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').textContent = facts[randomIndex];
         });
     </script>
 </body>
