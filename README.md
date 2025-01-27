@@ -1,0 +1,2 @@
+# funfacts
+gen ai workshop
